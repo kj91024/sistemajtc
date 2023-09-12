@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".TareasActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="10dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/cloud_inference_api_svgrepo_com"
+                tools:srcCompat="@drawable/cloud_inference_api_svgrepo_com" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Sistema JTC"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Button
+                style="?attr/materialIconButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goSettings"
+                app:icon="@drawable/baseline_settings_24" />
+
+            <Button
+                style="?attr/materialIconButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="logout"
+                app:icon="@drawable/baseline_logout_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TICKET"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10sp">
+
+                    <ImageView
+                        android:id="@+id/mapa"
+                        android:layout_width="394dp"
+                        android:layout_height="108dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/cliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5sp"
+                        android:text="Cliente: Rosario (U998274)"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/direccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5sp"
+                        android:text="Dirección del cliente: Mz M lote 18 URB San Gabirle SJL"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/mufa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5sp"
+                        android:text="Mufa: J3T12"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/razon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5sp"
+                        android:text="Razón de visita: Cambio de Modem"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/descripcion_razon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5sp"
+                        android:text="Descripción del problema: El usuario comenta que muchas veces la linea se va y viene, necesita con urgencia una solución porque esta en la ultima semana de exmanes."
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/cita_programada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5sp"
+                        android:text="Cita programada: 4 P.M. "
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tiempo_resolver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="15sp"
+                        android:text="Tiempo aproximado para resolver el desperfecto es de 30 min."
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+                    <Button
+                        android:id="@+id/llamar"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1763C0"
+                        android:onClick="call"
+                        android:text="Llamar al cliente"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/whatsapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#56CC1E"
+                        android:onClick="goWhatsapp"
+                        android:text="Contactar por Whatsapp"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
